@@ -4,6 +4,8 @@ import br.com.alura.screenmatch.modelos.Episodio;
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 
+import java.util.ArrayList;
+
 public class Principal {
     public static void main(String[] args) {
         Filme meuFilme = new Filme();
@@ -47,8 +49,23 @@ public class Principal {
         Episodio episodio = new Episodio();
         episodio.setNumero(1);
         episodio.setSerie(lost);
-        episodio.setTotalVisualizacoes(50);
+        episodio.setTotalVisualizacoes(250);
         filtro.filtra(episodio);
+
+
+        var filmeDoWagner = new Filme();
+        filmeDoWagner.setNome("A família Belier");
+        filmeDoWagner.setDuracaoEmMinutos(120);
+        filmeDoWagner.avalia(10);
+        filmeDoWagner.setAnoDeLancamento(2020);
+
+        ArrayList<Filme> listaDeFilme = new ArrayList<>();
+        listaDeFilme.add(filmeDoWagner);
+        listaDeFilme.add(meuFilme);
+        listaDeFilme.add(outroFilme);
+        System.out.println("Tamamho da lista: " + listaDeFilme.size());
+        System.out.println("Primeiro Filme: " + listaDeFilme.get(0).getNome());
+        System.out.println(listaDeFilme);
 
     }
 }
