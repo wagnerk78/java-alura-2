@@ -8,9 +8,7 @@ import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
-        Filme meuFilme = new Filme();
-        meuFilme.setNome("O Poderoso Chefão");
-        meuFilme.setAnoDeLancamento(1970);
+        Filme meuFilme = new Filme("O Poderoso Chefão", 1970);
         meuFilme.setDuracaoEmMinutos(180);
 
         meuFilme.exibeFichaTecnica();
@@ -21,9 +19,7 @@ public class Principal {
         System.out.println("Total de avaliações: " + meuFilme.getTotalDeAvaliacoes());
         System.out.println(meuFilme.pegaMedia());
 
-        Serie lost = new Serie();
-        lost.setNome("Lost");
-        lost.setAnoDeLancamento(2000);
+        Serie lost = new Serie("Lost", 2000);
         lost.exibeFichaTecnica();
         lost.setTemporadas(10);
         lost.setEpisodiosPorTemporada(10);
@@ -31,9 +27,7 @@ public class Principal {
 
         System.out.println("A duração para maratonar Lost é: " + lost.getDuracaoEmMinutos());
 
-        Filme outroFilme = new Filme();
-        outroFilme.setNome("Avatar");
-        outroFilme.setAnoDeLancamento(2021);
+        Filme outroFilme = new Filme("Avatar", 2021);
         outroFilme.setDuracaoEmMinutos(200);
 
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
@@ -53,11 +47,10 @@ public class Principal {
         filtro.filtra(episodio);
 
 
-        var filmeDoWagner = new Filme();
-        filmeDoWagner.setNome("A família Belier");
+        var filmeDoWagner = new Filme("A família Belier", 2020);
+        // filmeDoWagner.setNome();
         filmeDoWagner.setDuracaoEmMinutos(120);
         filmeDoWagner.avalia(10);
-        filmeDoWagner.setAnoDeLancamento(2020);
 
         ArrayList<Filme> listaDeFilme = new ArrayList<>();
         listaDeFilme.add(filmeDoWagner);
