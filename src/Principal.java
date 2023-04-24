@@ -46,7 +46,6 @@ public class Principal {
         episodio.setTotalVisualizacoes(250);
         filtro.filtra(episodio);
 
-
         var filmeDoWagner = new Filme("A família Belier", 2020);
         // filmeDoWagner.setNome();
         filmeDoWagner.setDuracaoEmMinutos(120);
