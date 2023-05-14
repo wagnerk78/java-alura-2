@@ -48,12 +48,12 @@ public class PrincipalBusca {
 
 
 
-                TituloOmdb meuTituloOmdb = gson.fromJson(json, TituloOmdb.class);
-                System.out.println(meuTituloOmdb);
+               TituloOmdb meuTituloOmdb = gson.fromJson(json, TituloOmdb.class);
+                //System.out.println(meuTituloOmdb);
                 //try {
                 Titulo meuTitulo = new Titulo(meuTituloOmdb);
-                System.out.println("Título já convertido: ");
-                System.out.println(meuTitulo);
+                //System.out.println("Título já convertido: ");
+                //System.out.println(meuTitulo);
 
                 titulos.add(meuTitulo);
 
@@ -66,7 +66,7 @@ public class PrincipalBusca {
                 System.out.println(e.getMessage());
             }
         }
-        FileWriter escrita = new FileWriter("filmes.json");
+        FileWriter escrita = new FileWriter("newfilmesa.json");
         escrita.write(gson.toJson(titulos));
         escrita.close();
         System.out.println("O programa terminou!");
